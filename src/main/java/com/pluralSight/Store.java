@@ -6,11 +6,19 @@ import java.util.Arrays;
 
 public class Store {
 
+    private static final String FILE_NAME = "Products.csv";
+    private static final ArrayList<Product> inventory = new ArrayList<>();
+
     public static void main(String[] args) {
 
-        try {
-            String fileName = "product.csv";
+        loadInventory(FILE_NAME);
 
+    }
+
+    private static void loadInventory(String fileName) {
+        try {
+
+            // read from product file
             FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
@@ -20,6 +28,7 @@ public class Store {
 
                 String[] parts = line.split("\\|");
 
+                // extract internal attributes from each line
                 if (parts.length == 3){
 
                     String id = parts[0];
@@ -28,29 +37,25 @@ public class Store {
 
                     Product product = new Product(id, productName, price);
 
-                    Product[] products = new Product[8];
-
-                    for (int i = 0; i < products.length; i++) {
-
-                        products[i] = product;
-
-                    }
+                    inventory.add(product); // add all products to the inventory list
 
                 }
 
             }
 
+            bufferedReader.close();
 
 
         } catch (FileNotFoundException e) {
 
-            System.out.println("FileNotFoundException occurred! " + e.getMessage());
+            System.out.println("File not found! Please enter the correct file name " + e.getMessage());
 
         } catch (IOException e){
 
-            System.out.println("IOException occurred! " + e.getMessage());
+            System.out.println("Error reading from product file" + e.getMessage());
 
         }
 
     }
+    
 }
