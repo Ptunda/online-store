@@ -2,15 +2,41 @@ package com.pluralSight;
 
 public class Product {
 
-    private String sku;
+    private String id;
     private String productName;
     private double price;
-    private String department;
 
-    public Product(String sku, String productName, double price, String department) {
-        this.sku = sku;
+    public Product(String id, String productName, double price) {
+
+        this.id = id;
         this.productName = productName;
         this.price = price;
-        this.department = department;
+
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+
 }
