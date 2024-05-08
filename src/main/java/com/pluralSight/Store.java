@@ -144,12 +144,70 @@ public class Store {
         // The method should prompt the user to remove items from their cart by entering the ID of the product they want to remove.
         // The method should update the cart ArrayList and totalAmount variable accordingly.
 
+        System.out.println("View Cart: ");
+        System.out.println("===========================================================================================");
+        System.out.printf(" %-20s %-50s %s\n", "Product ID", "Product Name", "Product Price");
+        System.out.println("===========================================================================================");
+
+
+        for (Product product : cart) {
+
+            System.out.printf(" %-20s %-50s %.2f\n", product.getId(), product.getProductName(), product.getPrice());
+
+            totalAmount += product.getPrice();
+
+        }
+
+        System.out.printf("\nSubtotal = $%.2f\n\n", totalAmount);
+
+        System.out.print("Do you want to remove a product from your cart? (Y/N) ");
+        String response = scanner.nextLine().trim();
+
+        if (cart.isEmpty()) {
+
+            System.out.println("\n🤔OOPS!!! No product to remove.\n");
+
+        } else {
+
+            if (response.equalsIgnoreCase("Y")) {
+
+                System.out.print("Enter product ID to remove product: ");
+                String id = scanner.nextLine().trim();
+
+                // Find the product in the inventory by ID
+                Product productToBeRemoved = findProductById(id, inventory);
+
+                // If the product is found, add it to the cart
+                if (productToBeRemoved != null) {
+
+                    cart.remove(productToBeRemoved);
+                    System.out.println("\nProduct removed from cart: " + productToBeRemoved.getProductName() + "\n");
+
+                } else {
+
+                    System.out.println("\nProduct not found in the cart.\n");
+
+                }
+
+
+            } else if (response.equalsIgnoreCase("N")) {
+
+                System.out.println("\nLet's continue! 😊\n");
+
+            } else {
+
+                System.out.println("Invalid input. Try again.");
+
+            }
+
+        }
 
     }
 
     public static void checkOut(ArrayList<Product> cart, double totalAmount) {
         // This method should calculate the total cost of all items in the cart, and display a summary of the purchase to the user.
         // The method should prompt the user to confirm the purchase, and deduct the total cost from their account if they confirm.
+
 
 
 
