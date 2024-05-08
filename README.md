@@ -59,4 +59,4 @@ List resources such as tutorials, articles, or documentation that helped you dur
 
 
 - Thank you to Mr. Raymond for continuous support and guidance.
-- A special thanks to all classmates for their dedication and teamwork to completing this project.
+- A special thanks to all classmates for your dedication and teamwork to completing this project.
