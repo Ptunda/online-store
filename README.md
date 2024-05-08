@@ -1,26 +1,24 @@
-# Project Title
+# Online Store Application
 
 ## Description of the Project
 
-Briefly describe what this Java console application does. Mention its purpose and who the intended users are. Explain the main functionality and what problems it aims to solve.
+This Java console application serves as an online store where users can view products, add them to their cart, and proceed with checkout. The purpose of this application is to provide a simple and intuitive way for users to shop for products virtually. The intended users are customers who want to browse and purchase products from the comfort of their own home.
 
+The main functionality includes displaying a list of products available for purchase, allowing users to add products to their cart, displaying the contents of the cart, and enabling users to proceed with checkout by confirming their purchase.
 ![Class Diagram](path/to/your/class_diagram.png)
 
 ## User Stories
 
-List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
-
-- As a user, I want to be able to input my data, so that the application can process it accordingly.
-- As a user, I want to receive immediate feedback, so I can understand what to do next.
-
-## Setup
-
-Instructions on how to set up and run the project using IntelliJ IDEA.
+- As a user, I want a functionality that can read from my product file and load the inventory to my app, so that I can keep track of all the stock in my store.
+- As a user, I want my stock visible to my customers; displaying product id, name, and price, so that they can be able to make purchases, add to cart or remove from cart.
+- As a user, I want a functionality that displays all the products to the customers and prompt them to select a product they want to add to their cart, so that they can populate their cart.
+- As a user, I want a functionality that displays all products in a customer's cart and along with a subtotal, so that they can be able to track how much their total cost is going to be.
+- As a user, I want a functionality that calculates the total price in a customer's cart, displays a summary and prompts them to confirm a purchase, so that I can collect a payment from a purchase.
 
 ### Prerequisites
 
 - IntelliJ IDEA: Ensure you have IntelliJ IDEA installed, which you can download from [here](https://www.jetbrains.com/idea/download/).
-- Java SDK: Make sure Java SDK is installed and configured in IntelliJ.
+- Java JDK: Make sure Java JDK is installed and configured in IntelliJ.
 
 ### Running the Application in IntelliJ
 
@@ -34,37 +32,31 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Technologies Used
 
-- Java: Mention the version you are using.
-- Any additional libraries or frameworks used in the project.
+- Java 22.
+- Intellij IDEA 24.1, community edition.
+- Scanner class for user input
+- FileReader and BufferedReader classes to read from a file
+- ArrayList class to create an inventory arraylist and cart arraylist
 
 ## Demo
 
-Include screenshots or GIFs that show your application in action. Use tools like [Giphy Capture](https://giphy.com/apps/giphycapture) to record a GIF of your application.
 
 ![Application Screenshot](path/to/your/screenshot.png)
 
 ## Future Work
 
-Outline potential future enhancements or functionalities you might consider adding:
-
-- Additional feature to be developed.
-- Improvement of current functionalities.
+- Implementing a user authentication system.
+- Adding support for multiple payment methods.
+- Enhancing the user interface with a graphical interface.
 
 ## Resources
 
 List resources such as tutorials, articles, or documentation that helped you during the project.
 
-- [Java Programming Tutorial](https://www.example.com)
-- [Effective Java](https://www.example.com)
-
-## Team Members
-
-- **Name 1** - Specific contributions or roles.
-- **Name 2** - Specific contributions or roles.
+- Think Java
 
 ## Thanks
 
-Express gratitude towards those who provided help, guidance, or resources:
 
-- Thank you to [Mentor's Name] for continuous support and guidance.
-- A special thanks to all teammates for their dedication and teamwork.
+- Thank you to Mr. Raymond for continuous support and guidance.
+- A special thanks to all classmates for their dedication and teamwork to completing this project.
