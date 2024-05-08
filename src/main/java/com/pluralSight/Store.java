@@ -208,7 +208,50 @@ public class Store {
         // This method should calculate the total cost of all items in the cart, and display a summary of the purchase to the user.
         // The method should prompt the user to confirm the purchase, and deduct the total cost from their account if they confirm.
 
+        // Check if the cart is empty
+        if (cart.isEmpty()) {
+            System.out.println("Your cart is empty. Please add some items before checking out.");
+            return;
+        }
 
+        // Display the summary of the purchase
+        System.out.println("Summary of your purchase:");
+        System.out.println("===========================================================================================");
+        System.out.printf(" %-20s %-50s %s\n", "Product ID", "Product Name", "Product Price");
+        System.out.println("===========================================================================================");
+
+        for (Product product : cart) {
+
+            System.out.printf(" %-20s %-50s %.2f\n", product.getId(), product.getProductName(), product.getPrice());
+            totalAmount += product.getPrice();
+
+        }
+
+        System.out.printf("\nTotal Amount = $%.2f\n\n", totalAmount);
+
+        // Prompt the user to confirm the purchase
+        System.out.print("Do you want to proceed with the purchase? (Y/N) ");
+        String response = scanner.nextLine().trim();
+
+        if (response.equalsIgnoreCase("Y")) {
+
+            // Deduct the total cost from the user's account (not implemented here)
+            System.out.println("\nPayment successful. Thank you for your purchase!\n");
+
+            // Clear the cart after successful purchase
+            cart.clear();
+            // Reset total amount to zero
+            totalAmount = 0.0;
+
+        } else if (response.equalsIgnoreCase("N")) {
+
+            System.out.println("\nPurchase cancelled. Your cart has not been cleared.\n");
+
+        } else {
+
+            System.out.println("\nInvalid input. Please enter Y or N.\n");
+
+        }
 
 
     }
@@ -218,7 +261,16 @@ public class Store {
         // the specified ID, and return the corresponding Product object. If
         // no product with the specified ID is found, the method should return null.
 
-        
+        for (Product product : inventory) {
+
+            if (id.equalsIgnoreCase(product.getId())) {
+
+                return product;
+            }
+
+        }
+
+        return null;
 
     }
 
