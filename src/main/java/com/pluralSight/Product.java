@@ -9,11 +9,9 @@ public class Product {
 
     // constructor
     public Product(String id, String productName, double price) {
-
         this.id = id;
         this.productName = productName;
         this.price = price;
-
     }
 
     // getters
@@ -28,7 +26,4 @@ public class Product {
     public double getPrice() {
         return price;
     }
-
-
-
 }
