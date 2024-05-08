@@ -5,7 +5,11 @@
 This Java console application serves as an online store where users can view products, add them to their cart, and proceed with checkout. The purpose of this application is to provide a simple and intuitive way for users to shop for products virtually. The intended users are customers who want to browse and purchase products from the comfort of their own home.
 
 The main functionality includes displaying a list of products available for purchase, allowing users to add products to their cart, displaying the contents of the cart, and enabling users to proceed with checkout by confirming their purchase.
-![Class Diagram](path/to/your/class_diagram.png)
+<br>
+<figure>
+  <img src="Screenshot 2024-05-08 000648.png">
+  <figcaption><i>Class screenshot shwoing all related classes, files, and Technologies used</i></figcaption>
+</figure>
 
 ## User Stories
 
@@ -41,7 +45,11 @@ Follow these steps to get your application running within IntelliJ IDEA:
 ## Demo
 
 
-![Application Screenshot](path/to/your/screenshot.png)
+<br>
+<figure>
+  <img src="video1882056606.gif">
+  <figcaption><i>GIF file to demo the project</i></figcaption>
+</figure>
 
 ## Future Work
 
