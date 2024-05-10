@@ -165,9 +165,9 @@ public class Store {
                 String id = scanner.nextLine().trim();
 
                 // Find the product in the cart by ID
-                Product productToBeRemoved = findProductById(id, inventory);
+                Product productToBeRemoved = findProductById(id, cart);
 
-                // If the product is found, add it to the cart
+                // If the product is found, remove it from the cart
                 if (productToBeRemoved != null) {
 
                     cart.remove(productToBeRemoved);
