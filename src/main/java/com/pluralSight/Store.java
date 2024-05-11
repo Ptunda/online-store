@@ -41,6 +41,9 @@ public class Store {
                 case "3":
                     checkOut(cart, totalAmount);
                     break;
+                case "4":
+                    running = false;
+                    break;
                 default:
                     System.out.println("Invalid choice!");
                     break;
